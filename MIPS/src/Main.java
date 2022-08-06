@@ -18,7 +18,7 @@ public class Main {
 
     public static void main(String[] args) throws IOException {
         List<String> opcodes = List.of("beq", "add", "nor", "or", "addi", "sll", "sw", "sub", "j", "and", "srl", "ori", "bneq", "subi", "andi","lw");
-        List<String> registers = List.of("$zero", "$t0", "$t1", "$t2", "$t3", "$t4");
+        List<String> registers = List.of("$zero", "$t0", "$t1", "$t2", "$t3", "$t4", "$sp");
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("text.txt")));
         System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("output.txt")), true));
         String instruction;
