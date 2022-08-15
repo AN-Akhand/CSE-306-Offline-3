@@ -1,8 +1,28 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-
-  <lib desc="#Wiring" name="0"/>
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
+    <tool name="Splitter">
+      <a name="facing" val="west"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </tool>
+    <tool name="Pin">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Probe">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Pull Resistor">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Clock">
+      <a name="facing" val="north"/>
+    </tool>
+    <tool name="Constant">
+      <a name="facing" val="north"/>
+    </tool>
+  </lib>
   <lib desc="#Gates" name="1"/>
   <lib desc="#Plexers" name="2"/>
   <lib desc="#Arithmetic" name="3"/>
@@ -22,7 +42,7 @@
       <a name="valign" val="base"/>
     </tool>
   </lib>
-  <main name="main"/>
+  <main name="Control Unit"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -55,8 +75,8 @@
     <tool lib="1" name="AND Gate"/>
     <tool lib="1" name="OR Gate"/>
   </toolbar>
-  <circuit name="main">
-    <a name="circuit" val="main"/>
+  <circuit name="Control Unit">
+    <a name="circuit" val="Control Unit"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -67,17 +87,17 @@
       <circ-port height="10" pin="440,50" width="10" x="55" y="75"/>
       <circ-port height="10" pin="470,200" width="10" x="75" y="65"/>
       <circ-port height="10" pin="470,230" width="10" x="75" y="75"/>
-      <circ-port height="10" pin="470,260" width="10" x="75" y="85"/>
-      <circ-port height="10" pin="470,290" width="10" x="75" y="95"/>
+      <circ-port height="10" pin="470,260" width="10" x="75" y="155"/>
+      <circ-port height="10" pin="470,290" width="10" x="75" y="135"/>
       <circ-port height="10" pin="360,320" width="10" x="55" y="95"/>
       <circ-port height="10" pin="360,350" width="10" x="55" y="135"/>
       <circ-port height="10" pin="360,380" width="10" x="55" y="155"/>
-      <circ-port height="10" pin="470,390" width="10" x="75" y="105"/>
-      <circ-port height="10" pin="470,430" width="10" x="75" y="115"/>
+      <circ-port height="10" pin="470,390" width="10" x="75" y="115"/>
+      <circ-port height="10" pin="470,430" width="10" x="75" y="105"/>
       <circ-port height="10" pin="470,460" width="10" x="75" y="125"/>
-      <circ-port height="10" pin="470,490" width="10" x="75" y="135"/>
-      <circ-port height="10" pin="470,520" width="10" x="75" y="145"/>
-      <circ-port height="10" pin="470,550" width="10" x="75" y="155"/>
+      <circ-port height="10" pin="470,490" width="10" x="75" y="95"/>
+      <circ-port height="10" pin="470,520" width="10" x="75" y="85"/>
+      <circ-port height="10" pin="470,550" width="10" x="75" y="145"/>
       <circ-anchor facing="east" height="6" width="6" x="57" y="87"/>
     </appear>
     <wire from="(370,190)" to="(370,260)"/>
@@ -120,18 +140,57 @@
     <wire from="(270,50)" to="(270,170)"/>
     <wire from="(350,190)" to="(350,310)"/>
     <wire from="(160,210)" to="(160,270)"/>
-    <comp lib="0" loc="(470,490)" name="Pin">
+    <comp lib="0" loc="(470,460)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="MemRead"/>
+      <a name="label" val="MemWrite"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(470,290)" name="Pin">
+    <comp lib="0" loc="(360,320)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="ALU_SRC"/>
+      <a name="label" val="ALU0"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(270,170)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="12"/>
+      <a name="incoming" val="12"/>
+    </comp>
+    <comp lib="0" loc="(470,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="RegWrite"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(140,250)" name="Power"/>
+    <comp lib="0" loc="(360,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ALU1"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(450,390)" name="Splitter">
+      <a name="facing" val="north"/>
+      <a name="fanout" val="3"/>
+      <a name="incoming" val="3"/>
+    </comp>
+    <comp lib="0" loc="(470,230)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="BNEQ"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(470,520)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="BRANCH"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(470,390)" name="Pin">
@@ -142,16 +201,11 @@
       <a name="label" val="ALU_OP"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(100,170)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="OPCode"/>
-    </comp>
-    <comp lib="0" loc="(360,380)" name="Pin">
+    <comp lib="0" loc="(470,290)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="ALU2"/>
+      <a name="label" val="ALU_SRC"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="0" loc="(470,200)" name="Pin">
@@ -161,57 +215,11 @@
       <a name="label" val="JUMP"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(360,350)" name="Pin">
+    <comp lib="0" loc="(470,490)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="ALU1"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(140,250)" name="Power"/>
-    <comp lib="0" loc="(270,170)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="12"/>
-      <a name="incoming" val="12"/>
-    </comp>
-    <comp lib="0" loc="(360,320)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="ALU0"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(470,230)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="BNEQ"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(470,430)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="MemToReg"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(470,460)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="MemWrite"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(450,390)" name="Splitter">
-      <a name="facing" val="north"/>
-      <a name="fanout" val="3"/>
-      <a name="incoming" val="3"/>
-    </comp>
-    <comp lib="0" loc="(470,550)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="REG_DST"/>
+      <a name="label" val="MemRead"/>
       <a name="labelloc" val="east"/>
     </comp>
     <comp lib="4" loc="(250,170)" name="ROM">
@@ -222,13 +230,6 @@
 1 834 6c 2c 412 1c 3c 28c
 </a>
     </comp>
-    <comp lib="0" loc="(470,520)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="BRANCH"/>
-      <a name="labelloc" val="east"/>
-    </comp>
     <comp lib="0" loc="(440,50)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
@@ -236,12 +237,31 @@
       <a name="tristate" val="false"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(470,260)" name="Pin">
+    <comp lib="0" loc="(470,430)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="tristate" val="false"/>
-      <a name="label" val="RegWrite"/>
+      <a name="label" val="MemToReg"/>
       <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(470,550)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="REG_DST"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(360,380)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="ALU2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(100,170)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="OPCode"/>
     </comp>
   </circuit>
 </project>

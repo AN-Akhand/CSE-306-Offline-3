@@ -1,8 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-
-  <lib desc="#Wiring" name="0">
+This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+<lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
@@ -174,32 +173,24 @@
     <wire from="(660,160)" to="(660,210)"/>
     <wire from="(660,370)" to="(1060,370)"/>
     <wire from="(530,180)" to="(530,230)"/>
+    <comp lib="0" loc="(700,290)" name="Ground"/>
+    <comp lib="7" loc="(750,210)" name="74157"/>
+    <comp lib="0" loc="(840,200)" name="Power"/>
+    <comp lib="0" loc="(170,150)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="A"/>
+    </comp>
     <comp lib="0" loc="(450,160)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="B"/>
     </comp>
+    <comp lib="0" loc="(860,230)" name="Ground"/>
     <comp lib="0" loc="(210,150)" name="Splitter">
       <a name="facing" val="south"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="7" loc="(750,210)" name="74157"/>
-    <comp lib="0" loc="(1030,170)" name="Splitter">
-      <a name="facing" val="south"/>
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
-    </comp>
-    <comp lib="0" loc="(700,290)" name="Ground"/>
-    <comp lib="0" loc="(860,230)" name="Ground"/>
-    <comp lib="0" loc="(630,160)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="S"/>
-    </comp>
-    <comp lib="0" loc="(170,150)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-      <a name="label" val="A"/>
     </comp>
     <comp lib="0" loc="(990,170)" name="Pin">
       <a name="output" val="true"/>
@@ -207,15 +198,23 @@
       <a name="tristate" val="false"/>
       <a name="label" val="Y"/>
     </comp>
+    <comp lib="0" loc="(1030,170)" name="Splitter">
+      <a name="facing" val="south"/>
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
+    </comp>
     <comp lib="0" loc="(490,160)" name="Splitter">
       <a name="facing" val="south"/>
       <a name="fanout" val="4"/>
       <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(840,200)" name="Power"/>
+    <comp lib="0" loc="(630,160)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="S"/>
+    </comp>
   </circuit>
-  <circuit name="6(4) TO 1(4) MUX">
-    <a name="circuit" val="6(4) TO 1(4) MUX"/>
+  <circuit name="7(4) TO 1(4) MUX">
+    <a name="circuit" val="7(4) TO 1(4) MUX"/>
     <a name="clabel" val=""/>
     <a name="clabelup" val="east"/>
     <a name="clabelfont" val="SansSerif plain 12"/>
@@ -300,11 +299,29 @@
     <wire from="(540,330)" to="(550,330)"/>
     <wire from="(540,370)" to="(550,370)"/>
     <wire from="(540,230)" to="(550,230)"/>
-    <comp lib="0" loc="(540,260)" name="Pin">
+    <comp loc="(580,460)" name="4BIT MUX"/>
+    <comp loc="(720,420)" name="4BIT MUX"/>
+    <comp loc="(580,390)" name="4BIT MUX"/>
+    <comp lib="0" loc="(540,400)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(540,400)" name="Pin">
+    <comp loc="(810,360)" name="4BIT MUX"/>
+    <comp lib="0" loc="(540,440)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(510,470)" name="Ground">
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(840,350)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp loc="(720,280)" name="4BIT MUX"/>
+    <comp lib="0" loc="(540,260)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
@@ -312,45 +329,27 @@
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp loc="(810,360)" name="4BIT MUX"/>
-    <comp loc="(580,460)" name="4BIT MUX"/>
-    <comp lib="0" loc="(540,230)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
+    <comp loc="(580,320)" name="4BIT MUX"/>
+    <comp lib="0" loc="(110,390)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
     </comp>
-    <comp lib="0" loc="(510,470)" name="Ground">
-      <a name="width" val="4"/>
-    </comp>
-    <comp loc="(720,420)" name="4BIT MUX"/>
     <comp lib="0" loc="(90,390)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp lib="0" loc="(540,440)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-    </comp>
-    <comp loc="(580,320)" name="4BIT MUX"/>
-    <comp lib="0" loc="(840,350)" name="Pin">
-      <a name="facing" val="west"/>
-      <a name="output" val="true"/>
-      <a name="width" val="4"/>
-      <a name="labelloc" val="east"/>
-    </comp>
-    <comp lib="0" loc="(540,330)" name="Pin">
-      <a name="width" val="4"/>
-      <a name="tristate" val="false"/>
-    </comp>
+    <comp loc="(580,250)" name="4BIT MUX"/>
     <comp lib="0" loc="(540,370)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
     </comp>
-    <comp loc="(580,390)" name="4BIT MUX"/>
-    <comp loc="(720,280)" name="4BIT MUX"/>
-    <comp loc="(580,250)" name="4BIT MUX"/>
-    <comp lib="0" loc="(110,390)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
+    <comp lib="0" loc="(540,230)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
+    </comp>
+    <comp lib="0" loc="(540,330)" name="Pin">
+      <a name="width" val="4"/>
+      <a name="tristate" val="false"/>
     </comp>
   </circuit>
 </project>
