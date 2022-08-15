@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <project source="2.7.1" version="1.0">
-This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
-<lib desc="#Wiring" name="0">
+  This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
+
+  <lib desc="#Wiring" name="0">
     <tool name="Splitter">
       <a name="facing" val="west"/>
       <a name="fanout" val="3"/>
@@ -119,29 +120,36 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <a name="clabelfont" val="SansSerif plain 12"/>
     <appear>
       <path d="M54,51 Q60,59 66,51" fill="none" stroke="#808080" stroke-width="2"/>
-      <rect fill="none" height="60" stroke="#000000" stroke-width="2" width="20" x="50" y="50"/>
+      <rect fill="none" height="70" stroke="#000000" stroke-width="2" width="60" x="50" y="50"/>
       <circ-port height="8" pin="60,70" width="8" x="46" y="96"/>
       <circ-port height="8" pin="60,140" width="8" x="46" y="86"/>
-      <circ-port height="8" pin="40,300" width="8" x="56" y="106"/>
+      <circ-port height="8" pin="40,300" width="8" x="46" y="106"/>
       <circ-port height="8" pin="60,570" width="8" x="46" y="56"/>
       <circ-port height="8" pin="60,610" width="8" x="46" y="66"/>
-      <circ-port height="10" pin="890,410" width="10" x="65" y="85"/>
-      <circ-port height="10" pin="890,260" width="10" x="65" y="65"/>
-      <circ-anchor facing="east" height="6" width="6" x="67" y="67"/>
+      <circ-port height="10" pin="960,410" width="10" x="105" y="85"/>
+      <circ-port height="10" pin="950,260" width="10" x="105" y="65"/>
+      <circ-port height="8" pin="460,160" width="8" x="46" y="76"/>
+      <circ-port height="10" pin="820,110" width="10" x="55" y="115"/>
+      <circ-port height="10" pin="840,130" width="10" x="65" y="115"/>
+      <circ-port height="10" pin="860,150" width="10" x="75" y="115"/>
+      <circ-port height="10" pin="880,170" width="10" x="85" y="115"/>
+      <circ-port height="10" pin="900,190" width="10" x="95" y="115"/>
+      <circ-anchor facing="east" height="6" width="6" x="77" y="67"/>
     </appear>
     <wire from="(810,150)" to="(810,290)"/>
+    <wire from="(860,260)" to="(910,260)"/>
     <wire from="(490,160)" to="(490,480)"/>
-    <wire from="(340,390)" to="(850,390)"/>
-    <wire from="(860,300)" to="(860,310)"/>
     <wire from="(210,410)" to="(210,420)"/>
     <wire from="(200,280)" to="(250,280)"/>
     <wire from="(230,150)" to="(280,150)"/>
+    <wire from="(280,230)" to="(910,230)"/>
     <wire from="(100,100)" to="(150,100)"/>
+    <wire from="(810,290)" to="(910,290)"/>
+    <wire from="(550,410)" to="(910,410)"/>
     <wire from="(410,170)" to="(410,190)"/>
     <wire from="(240,310)" to="(240,390)"/>
     <wire from="(340,240)" to="(340,390)"/>
     <wire from="(280,150)" to="(280,230)"/>
-    <wire from="(820,310)" to="(860,310)"/>
     <wire from="(70,270)" to="(70,290)"/>
     <wire from="(210,170)" to="(210,190)"/>
     <wire from="(140,370)" to="(140,460)"/>
@@ -150,10 +158,8 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(390,70)" to="(490,70)"/>
     <wire from="(60,70)" to="(290,70)"/>
     <wire from="(760,70)" to="(760,150)"/>
-    <wire from="(550,260)" to="(850,260)"/>
     <wire from="(200,480)" to="(490,480)"/>
     <wire from="(690,170)" to="(690,190)"/>
-    <wire from="(870,260)" to="(890,260)"/>
     <wire from="(440,150)" to="(440,250)"/>
     <wire from="(100,120)" to="(130,120)"/>
     <wire from="(150,260)" to="(170,260)"/>
@@ -165,16 +171,20 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(670,150)" to="(680,150)"/>
     <wire from="(710,150)" to="(720,150)"/>
     <wire from="(760,160)" to="(770,160)"/>
-    <wire from="(40,300)" to="(170,300)"/>
+    <wire from="(550,260)" to="(860,260)"/>
+    <wire from="(340,390)" to="(910,390)"/>
+    <wire from="(920,450)" to="(920,460)"/>
     <wire from="(110,470)" to="(170,470)"/>
     <wire from="(110,470)" to="(110,540)"/>
-    <wire from="(340,240)" to="(850,240)"/>
     <wire from="(190,160)" to="(190,170)"/>
     <wire from="(720,150)" to="(720,280)"/>
     <wire from="(820,310)" to="(820,570)"/>
     <wire from="(460,190)" to="(510,190)"/>
+    <wire from="(860,460)" to="(920,460)"/>
     <wire from="(120,450)" to="(170,450)"/>
     <wire from="(100,130)" to="(100,270)"/>
+    <wire from="(630,270)" to="(880,270)"/>
+    <wire from="(820,310)" to="(920,310)"/>
     <wire from="(280,230)" to="(280,380)"/>
     <wire from="(250,280)" to="(250,430)"/>
     <wire from="(390,70)" to="(390,150)"/>
@@ -187,12 +197,13 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(130,120)" to="(130,280)"/>
     <wire from="(260,290)" to="(260,450)"/>
     <wire from="(550,150)" to="(550,260)"/>
+    <wire from="(80,300)" to="(170,300)"/>
     <wire from="(390,160)" to="(390,460)"/>
+    <wire from="(820,240)" to="(910,240)"/>
     <wire from="(60,140)" to="(80,140)"/>
     <wire from="(690,190)" to="(780,190)"/>
-    <wire from="(630,420)" to="(850,420)"/>
-    <wire from="(860,450)" to="(860,610)"/>
     <wire from="(270,300)" to="(270,470)"/>
+    <wire from="(880,270)" to="(910,270)"/>
     <wire from="(630,150)" to="(630,270)"/>
     <wire from="(160,390)" to="(240,390)"/>
     <wire from="(150,380)" to="(230,380)"/>
@@ -200,22 +211,21 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(390,160)" to="(400,160)"/>
     <wire from="(110,540)" to="(760,540)"/>
     <wire from="(190,160)" to="(200,160)"/>
-    <wire from="(720,430)" to="(850,430)"/>
     <wire from="(760,160)" to="(760,540)"/>
     <wire from="(670,160)" to="(680,160)"/>
     <wire from="(580,150)" to="(590,150)"/>
     <wire from="(230,320)" to="(230,380)"/>
     <wire from="(620,150)" to="(630,150)"/>
     <wire from="(200,460)" to="(390,460)"/>
-    <wire from="(280,380)" to="(850,380)"/>
     <wire from="(120,450)" to="(120,520)"/>
+    <wire from="(920,300)" to="(920,310)"/>
     <wire from="(200,290)" to="(260,290)"/>
     <wire from="(200,450)" to="(260,450)"/>
     <wire from="(410,190)" to="(460,190)"/>
     <wire from="(90,310)" to="(90,320)"/>
     <wire from="(310,170)" to="(310,190)"/>
     <wire from="(510,170)" to="(510,190)"/>
-    <wire from="(810,440)" to="(850,440)"/>
+    <wire from="(900,190)" to="(900,280)"/>
     <wire from="(120,520)" to="(670,520)"/>
     <wire from="(290,70)" to="(390,70)"/>
     <wire from="(580,70)" to="(580,150)"/>
@@ -223,6 +233,7 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(130,280)" to="(170,280)"/>
     <wire from="(810,290)" to="(810,440)"/>
     <wire from="(200,310)" to="(240,310)"/>
+    <wire from="(860,460)" to="(860,610)"/>
     <wire from="(70,290)" to="(170,290)"/>
     <wire from="(720,280)" to="(720,430)"/>
     <wire from="(210,190)" to="(310,190)"/>
@@ -231,12 +242,16 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(140,460)" to="(170,460)"/>
     <wire from="(200,320)" to="(230,320)"/>
     <wire from="(220,180)" to="(250,180)"/>
-    <wire from="(440,400)" to="(850,400)"/>
     <wire from="(60,610)" to="(860,610)"/>
+    <wire from="(630,420)" to="(910,420)"/>
     <wire from="(670,160)" to="(670,520)"/>
+    <wire from="(930,260)" to="(950,260)"/>
     <wire from="(70,270)" to="(100,270)"/>
+    <wire from="(860,150)" to="(860,260)"/>
+    <wire from="(340,240)" to="(820,240)"/>
+    <wire from="(880,170)" to="(880,270)"/>
+    <wire from="(930,410)" to="(960,410)"/>
     <wire from="(70,320)" to="(90,320)"/>
-    <wire from="(630,270)" to="(850,270)"/>
     <wire from="(150,480)" to="(170,480)"/>
     <wire from="(150,440)" to="(170,440)"/>
     <wire from="(200,330)" to="(220,330)"/>
@@ -245,34 +260,39 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(290,150)" to="(300,150)"/>
     <wire from="(330,150)" to="(340,150)"/>
     <wire from="(160,420)" to="(170,420)"/>
+    <wire from="(840,130)" to="(840,250)"/>
     <wire from="(200,420)" to="(210,420)"/>
-    <wire from="(720,280)" to="(850,280)"/>
+    <wire from="(40,300)" to="(50,300)"/>
+    <wire from="(440,250)" to="(840,250)"/>
+    <wire from="(840,250)" to="(910,250)"/>
+    <wire from="(900,280)" to="(910,280)"/>
     <wire from="(130,500)" to="(580,500)"/>
     <wire from="(580,160)" to="(590,160)"/>
-    <wire from="(280,230)" to="(850,230)"/>
     <wire from="(130,430)" to="(130,500)"/>
     <wire from="(110,330)" to="(170,330)"/>
+    <wire from="(720,280)" to="(900,280)"/>
     <wire from="(220,170)" to="(220,180)"/>
     <wire from="(60,570)" to="(820,570)"/>
+    <wire from="(720,430)" to="(910,430)"/>
     <wire from="(200,430)" to="(250,430)"/>
+    <wire from="(280,380)" to="(910,380)"/>
+    <wire from="(820,110)" to="(820,240)"/>
     <wire from="(440,250)" to="(440,400)"/>
+    <wire from="(810,440)" to="(910,440)"/>
     <wire from="(290,70)" to="(290,150)"/>
-    <wire from="(810,290)" to="(850,290)"/>
     <wire from="(490,70)" to="(490,150)"/>
     <wire from="(160,390)" to="(160,420)"/>
     <wire from="(290,160)" to="(290,440)"/>
     <wire from="(580,160)" to="(580,500)"/>
-    <wire from="(550,410)" to="(850,410)"/>
     <wire from="(780,170)" to="(780,190)"/>
     <wire from="(140,270)" to="(170,270)"/>
-    <wire from="(440,250)" to="(850,250)"/>
     <wire from="(510,190)" to="(600,190)"/>
-    <wire from="(870,410)" to="(890,410)"/>
     <wire from="(140,110)" to="(140,270)"/>
     <wire from="(530,150)" to="(550,150)"/>
     <wire from="(200,440)" to="(290,440)"/>
     <wire from="(220,330)" to="(220,370)"/>
     <wire from="(670,70)" to="(760,70)"/>
+    <wire from="(440,400)" to="(910,400)"/>
     <wire from="(200,260)" to="(220,260)"/>
     <wire from="(490,160)" to="(500,160)"/>
     <wire from="(290,160)" to="(300,160)"/>
@@ -280,100 +300,139 @@ This file is intended to be loaded by Logisim (http://www.cburch.com/logisim/).
     <wire from="(800,150)" to="(810,150)"/>
     <wire from="(760,150)" to="(770,150)"/>
     <wire from="(150,380)" to="(150,440)"/>
-    <comp lib="7" loc="(200,260)" name="74138"/>
-    <comp lib="4" loc="(800,150)" name="Register">
-      <a name="width" val="4"/>
-      <a name="label" val="sp"/>
+    <comp lib="0" loc="(80,140)" name="Splitter">
+      <a name="fanout" val="4"/>
+      <a name="incoming" val="4"/>
     </comp>
+    <comp lib="4" loc="(430,150)" name="Register">
+      <a name="width" val="4"/>
+      <a name="label" val="t1"/>
+    </comp>
+    <comp lib="0" loc="(250,180)" name="Power"/>
+    <comp lib="0" loc="(880,170)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="t3"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="4" loc="(330,150)" name="Register">
+      <a name="width" val="4"/>
+      <a name="label" val="t0"/>
+    </comp>
+    <comp lib="0" loc="(420,170)" name="Ground"/>
+    <comp lib="0" loc="(460,160)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="tristate" val="false"/>
+      <a name="label" val="CLK"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="0" loc="(220,260)" name="Power"/>
+    <comp lib="8" loc="(930,260)" name="7(4) TO 1(4) MUX"/>
     <comp lib="0" loc="(60,570)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Read Reg 1"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="4" loc="(430,150)" name="Register">
+    <comp lib="0" loc="(950,260)" name="Pin">
+      <a name="facing" val="west"/>
+      <a name="output" val="true"/>
       <a name="width" val="4"/>
-      <a name="label" val="t1"/>
+      <a name="label" val="Read Data 1"/>
+      <a name="labelloc" val="south"/>
     </comp>
-    <comp lib="0" loc="(80,140)" name="Splitter">
-      <a name="fanout" val="4"/>
-      <a name="incoming" val="4"/>
+    <comp lib="0" loc="(70,320)" name="Power"/>
+    <comp lib="7" loc="(200,420)" name="7404"/>
+    <comp lib="7" loc="(200,260)" name="74138"/>
+    <comp lib="0" loc="(820,110)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="t0"/>
+      <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(220,260)" name="Power"/>
+    <comp lib="0" loc="(210,410)" name="Power"/>
+    <comp lib="4" loc="(710,150)" name="Register">
+      <a name="width" val="4"/>
+      <a name="label" val="t4"/>
+    </comp>
+    <comp lib="0" loc="(150,480)" name="Ground"/>
+    <comp lib="0" loc="(700,170)" name="Ground"/>
+    <comp lib="0" loc="(40,300)" name="Pin">
+      <a name="tristate" val="false"/>
+      <a name="label" val="Reg Write"/>
+      <a name="labelloc" val="north"/>
+    </comp>
+    <comp lib="8" loc="(930,410)" name="7(4) TO 1(4) MUX"/>
+    <comp lib="4" loc="(800,150)" name="Register">
+      <a name="width" val="4"/>
+      <a name="label" val="sp"/>
+    </comp>
+    <comp lib="0" loc="(860,150)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="t2"/>
+      <a name="labelloc" val="east"/>
+    </comp>
+    <comp lib="0" loc="(520,170)" name="Ground"/>
     <comp lib="0" loc="(60,610)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Read Reg 2"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(610,170)" name="Ground"/>
-    <comp lib="7" loc="(200,420)" name="7404"/>
-    <comp lib="0" loc="(320,170)" name="Ground"/>
-    <comp lib="0" loc="(210,410)" name="Power"/>
-    <comp lib="0" loc="(520,170)" name="Ground"/>
+    <comp lib="4" loc="(230,150)" name="Register">
+      <a name="width" val="4"/>
+      <a name="label" val="Zero"/>
+    </comp>
+    <comp lib="4" loc="(620,150)" name="Register">
+      <a name="width" val="4"/>
+      <a name="label" val="t3"/>
+    </comp>
     <comp lib="0" loc="(60,70)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Write Data"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="8" loc="(870,260)" name="7(4) TO 1(4) MUX"/>
-    <comp lib="0" loc="(460,160)" name="Clock">
+    <comp lib="0" loc="(900,190)" name="Pin">
       <a name="facing" val="south"/>
-    </comp>
-    <comp lib="0" loc="(890,260)" name="Pin">
-      <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
-      <a name="label" val="Read Data 1"/>
+      <a name="label" val="t4"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(250,180)" name="Power"/>
-    <comp lib="4" loc="(330,150)" name="Register">
-      <a name="width" val="4"/>
-      <a name="label" val="t0"/>
-    </comp>
-    <comp lib="0" loc="(890,410)" name="Pin">
+    <comp lib="0" loc="(110,330)" name="Ground"/>
+    <comp lib="0" loc="(320,170)" name="Ground"/>
+    <comp lib="0" loc="(190,170)" name="Ground"/>
+    <comp lib="0" loc="(960,410)" name="Pin">
       <a name="facing" val="west"/>
       <a name="output" val="true"/>
       <a name="width" val="4"/>
       <a name="label" val="Read Data 2"/>
+      <a name="labelloc" val="south"/>
+    </comp>
+    <comp lib="0" loc="(840,130)" name="Pin">
+      <a name="facing" val="south"/>
+      <a name="output" val="true"/>
+      <a name="width" val="4"/>
+      <a name="label" val="t1"/>
       <a name="labelloc" val="east"/>
     </comp>
-    <comp lib="0" loc="(110,330)" name="Ground"/>
-    <comp lib="4" loc="(230,150)" name="Register">
-      <a name="width" val="4"/>
-      <a name="label" val="Zero"/>
-    </comp>
-    <comp lib="0" loc="(700,170)" name="Ground"/>
-    <comp lib="0" loc="(190,170)" name="Ground"/>
-    <comp lib="0" loc="(420,170)" name="Ground"/>
+    <comp lib="0" loc="(790,170)" name="Ground"/>
     <comp lib="0" loc="(60,140)" name="Pin">
       <a name="width" val="4"/>
       <a name="tristate" val="false"/>
       <a name="label" val="Write Reg"/>
       <a name="labelloc" val="north"/>
     </comp>
-    <comp lib="0" loc="(40,300)" name="Pin">
-      <a name="tristate" val="false"/>
-      <a name="label" val="Reg Write"/>
-      <a name="labelloc" val="north"/>
-    </comp>
-    <comp lib="4" loc="(620,150)" name="Register">
-      <a name="width" val="4"/>
-      <a name="label" val="t3"/>
-    </comp>
+    <comp lib="1" loc="(80,300)" name="NOT Gate"/>
     <comp lib="4" loc="(530,150)" name="Register">
       <a name="width" val="4"/>
       <a name="label" val="t2"/>
     </comp>
-    <comp lib="0" loc="(790,170)" name="Ground"/>
-    <comp lib="0" loc="(150,480)" name="Ground"/>
-    <comp lib="0" loc="(70,320)" name="Power"/>
-    <comp lib="8" loc="(870,410)" name="7(4) TO 1(4) MUX"/>
-    <comp lib="4" loc="(710,150)" name="Register">
-      <a name="width" val="4"/>
-      <a name="label" val="t4"/>
-    </comp>
+    <comp lib="0" loc="(610,170)" name="Ground"/>
   </circuit>
 </project>

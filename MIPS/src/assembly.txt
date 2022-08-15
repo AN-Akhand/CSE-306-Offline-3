@@ -1,0 +1,16 @@
+add $t1, $t2, $t3
+addi $t1, $t2, 1
+sub $t1, $zero, $t3
+subi $t4, $t1, 1
+or $t1, $t2, $t4
+ori $t3, $t2, 3
+and $t1, $t3, $t3
+andi $t3, $t2, 1
+beq $t1, $t2, 1
+bneq $t2, $t3, 2
+sw $t1, 3($t2)
+lw $t2, 4($t1)
+j 10
+nor $t1, $t2, $t3
+sll $t1, $t2, 10
+slr $t2, $t3, 3

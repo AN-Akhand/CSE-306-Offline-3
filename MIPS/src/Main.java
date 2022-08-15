@@ -7,6 +7,10 @@ public class Main {
 
     static boolean isIorS(int i) {return i == 0 || i == 4 || i == 5  || i == 10 || i == 11 || i == 12 || i == 13 || i == 14;}
 
+    static String getBit(String s){
+        return s.substring(s.length() - 1);
+    }
+
     static String getBin(int n){
         String s = Integer.toBinaryString(n);
         int len = s.length();
@@ -21,6 +25,7 @@ public class Main {
         List<String> registers = List.of("$zero", "$t0", "$t1", "$t2", "$t3", "$t4", "$sp");
         BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("text.txt")));
         System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("output.txt")), true));
+        System.out.println("v2.0 raw");
         String instruction;
         String ops;
         String[] operands;
@@ -31,46 +36,44 @@ public class Main {
         while(true){
             binIns = new StringBuilder();
             instruction = reader.readLine();
+//            System.out.println(instruction);
             if(instruction == null) break;
             ops = instruction.split(" ")[0];
             instruction = instruction.replace(ops, "").replace(" ", "");
             opcode = opcodes.indexOf(ops);
             if(isR(opcode)){
-                binIns.append(Integer.toHexString(opcode));
+                binIns.append((Integer.toHexString(opcode)));
                 operands = instruction.split(",");
-                binIns.append(Integer.toHexString(registers.indexOf(operands[1])));
-                binIns.append(Integer.toHexString(registers.indexOf(operands[2])));
-                binIns.append(Integer.toHexString(registers.indexOf(operands[0])));
-                System.out.println(binIns);
+                binIns.append(getBit(Integer.toHexString(registers.indexOf(operands[1]))));
+                binIns.append(getBit(Integer.toHexString(registers.indexOf(operands[2]))));
+                binIns.append(getBit(Integer.toHexString(registers.indexOf(operands[0]))));
             }
             else if(isIorS(opcode)){
-                binIns.append(Integer.toHexString(opcode));
+                binIns.append((Integer.toHexString(opcode)));
                 operands = instruction.split(",");
-                binIns.append(Integer.toHexString(registers.indexOf(operands[1])));
-                binIns.append(Integer.toHexString(registers.indexOf(operands[0])));
-                binIns.append(Integer.toHexString(Integer.parseInt(operands[2])));
-                System.out.println(binIns);
+                binIns.append(getBit(Integer.toHexString(registers.indexOf(operands[1]))));
+                binIns.append(getBit(Integer.toHexString(registers.indexOf(operands[0]))));
+                binIns.append(getBit(Integer.toHexString(Integer.parseInt(operands[2]))));
             }
             else if(opcode == 6 || opcode == 15){
-                binIns.append(Integer.toHexString(opcode));
+                binIns.append((Integer.toHexString(opcode)));
                 operands = instruction.split(",");
                 String src = operands[1].substring(operands[1].indexOf("(") + 1 ,operands[1].indexOf(")"));
                 String offset = operands[1].substring(0 ,operands[1].indexOf("("));
-                binIns.append(Integer.toHexString(registers.indexOf(src)));
-                binIns.append(Integer.toHexString(registers.indexOf(operands[0])));
-                binIns.append(Integer.toHexString(Integer.parseInt(offset)));
-                System.out.println(binIns);
+                binIns.append(getBit(Integer.toHexString(registers.indexOf(src))));
+                binIns.append(getBit(Integer.toHexString(registers.indexOf(operands[0]))));
+                binIns.append(getBit(Integer.toHexString(Integer.parseInt(offset))));
             }
             else{
-                binIns.append(Integer.toHexString(opcode));
-                String addr = Integer.toHexString(Integer.parseInt(instruction));
+                binIns.append((Integer.toHexString(opcode)));
+                String addr = getBit(Integer.toHexString(Integer.parseInt(instruction)));
                 if(addr.length() == 1){
                     addr = "0" + addr;
                 }
                 binIns.append(addr);
                 binIns.append("0");
-                System.out.println(binIns);
             }
+            System.out.print(binIns + " ");
         }
     }
 }
