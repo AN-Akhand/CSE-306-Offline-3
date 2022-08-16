@@ -6,4 +6,4 @@ pop $t2
 level2:
 j level1
 
-addi $t1, $t2, $t3
+add $t1, $t2, $t3

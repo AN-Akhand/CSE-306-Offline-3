@@ -1,0 +1,8 @@
+Line 0: sw $t1, 0($sp)
+Line 1: subi $sp, $sp, 1
+Line 2: beq $t1, $t2, level1
+Line 3: beq $t1, $t2, level2
+Line 4: lw $t2, 0($sp)
+Line 5: addi $sp, $sp, 1
+Line 6: j level1
+Line 7: addi $t1, $t2, $t3

@@ -5,8 +5,8 @@ import java.util.Map;
 
 public class PassOne {
     public static void main(String[] args) throws IOException {
-        String inputFile = "src//inp.txt";
-        String outputFile = "src//out2.txt";
+        String inputFile = "input.txt";
+        String outputFile = "int2.txt";
         if(args.length >= 1) inputFile = args[0];
         if(args.length >= 2) outputFile = args[1];
         BufferedReader br = new BufferedReader(new FileReader(inputFile));
@@ -19,8 +19,20 @@ public class PassOne {
             if(line == null) break;
             line = line.trim();
             if(line.equals(""))continue;
+            if(line.toLowerCase().contains("push") || line.toLowerCase().contains("pop")){
+//                System.out.println(line);
+                line = line.replace("push", "sw");
+                line = line.replace("pop", "lw");
+                line += ", 0($sp)";
+                lines.add(line);
+                if(line.contains("sw")) lines.add("subi $sp, $sp, 1");
+                else lines.add("addi $sp, $sp, 1");
+                lineNo += 2;
+//                System.out.println(line);
+//                lines.add(line);
+                continue;
+            }
             if(line.contains(":")){
-
                 map.put(line.replace(":", ""), lineNo);
             }
             else {
@@ -28,6 +40,15 @@ public class PassOne {
                 lines.add(line.trim());
             }
         }
+
+        BufferedWriter int1 = new BufferedWriter(new FileWriter("int1.txt"));
+        for(int i=0; i<lines.size(); i++){
+            int1.write("Line "+i+": "+lines.get(i)+"\n");
+        }
+        int1.flush();
+        int1.close();
+
+
         for(int ln=0; ln<lines.size(); ln++){
             String line = lines.get(ln);
             try {
@@ -42,8 +63,9 @@ public class PassOne {
                     String[] sss = line.split(",");
                     String level = sss[sss.length - 1].trim();
                     Integer i = map.get(level);
-                    System.out.println("I: "+i);
-                    System.out.println("LineNo: "+ln);
+//                    System.out.println(line);
+//                    System.out.println("I: "+i);
+//                    System.out.println("LineNo: "+ln);
                     if(i != null) line = line.replace(level, Integer.toString((i-ln)));
                     else line = "error";
                 }
@@ -55,5 +77,8 @@ public class PassOne {
         bw.flush();
         bw.close();
         br.close();
+
+
+        Main.assemblyToHex("int2.txt");
     }
 }

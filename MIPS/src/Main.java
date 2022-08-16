@@ -20,12 +20,15 @@ public class Main {
         return s;
     }
 
-    public static void main(String[] args) throws IOException {
-        List<String> opcodes = List.of("beq", "add", "nor", "or", "addi", "sll", "sw", "sub", "j", "and", "srl", "ori", "bneq", "subi", "andi","lw");
-        List<String> registers = List.of("$zero", "$t0", "$t1", "$t2", "$t3", "$t4", "$sp");
-        BufferedReader reader = new BufferedReader(new InputStreamReader(new FileInputStream("text.txt")));
-        System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("output.txt")), true));
-        System.out.println("v2.0 raw");
+    static List<String> opcodes = List.of("beq", "add", "nor", "or", "addi", "sll", "sw", "sub", "j", "and", "srl", "ori", "bneq", "subi", "andi","lw");
+    static List<String> registers = List.of("$zero", "$t0", "$t1", "$t2", "$t3", "$t4", "$sp");
+
+    public static void assemblyToHex(String fileName) throws IOException {
+
+        BufferedReader reader = new BufferedReader(new FileReader(fileName));
+//        System.setOut(new PrintStream(new BufferedOutputStream(new FileOutputStream("output.txt")), true));
+        BufferedWriter writer = new BufferedWriter(new FileWriter("output.txt"));
+        writer.write("v2.0 raw\n");
         String instruction;
         String ops;
         String[] operands;
@@ -36,7 +39,8 @@ public class Main {
         while(true){
             binIns = new StringBuilder();
             instruction = reader.readLine();
-//            System.out.println(instruction);
+            System.out.println(instruction);
+//            writer.write(instruction);
             if(instruction == null) break;
             ops = instruction.split(" ")[0];
             instruction = instruction.replace(ops, "").replace(" ", "");
@@ -73,7 +77,11 @@ public class Main {
                 binIns.append(addr);
                 binIns.append("0");
             }
-            System.out.print(binIns + " ");
+            writer.write(binIns + " ");
         }
+
+        writer.flush();
+        writer.close();
+        reader.close();
     }
 }
