@@ -19,14 +19,23 @@ public class PassOne {
             if(line == null) break;
             line = line.trim();
             if(line.equals(""))continue;
-            if(line.toLowerCase().contains("push") || line.toLowerCase().contains("pop")){
+            if(line.toLowerCase().contains("push")){
 //                System.out.println(line);
                 line = line.replace("push", "sw");
+                line += ", 0($sp)";
+                lines.add(line);
+                lines.add("addi $sp, $sp, 1");
+                lineNo += 2;
+//                System.out.println(line);
+//                lines.add(line);
+                continue;
+            }
+            else if(line.toLowerCase().contains("pop")){
+                //                System.out.println(line);
+                lines.add("subi $sp, $sp, 1");
                 line = line.replace("pop", "lw");
                 line += ", 0($sp)";
                 lines.add(line);
-                if(line.contains("sw")) lines.add("subi $sp, $sp, 1");
-                else lines.add("addi $sp, $sp, 1");
                 lineNo += 2;
 //                System.out.println(line);
 //                lines.add(line);
@@ -66,7 +75,9 @@ public class PassOne {
 //                    System.out.println(line);
 //                    System.out.println("I: "+i);
 //                    System.out.println("LineNo: "+ln);
-                    if(i != null) line = line.replace(level, Integer.toString((i-ln)));
+                    if(i != null) {
+                        line = line.replace(level, Integer.toString((i - ln - 1)));
+                    }
                     else line = "error";
                 }
                 bw.write(line+"\n");
