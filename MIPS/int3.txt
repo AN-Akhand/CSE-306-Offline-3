@@ -1,4 +1,3 @@
-l1:
 addi $t1, $t1, 1
 addi $t1, $t1, 1
 addi $t1, $t1, 1
@@ -6,7 +5,7 @@ addi $t1, $t1, 1
 addi $t1, $t1, 1
 addi $t1, $t1, 1
 bneq $t1, $zero, 1
-j l1
+j 0
 addi $t1, $zero, 0
 addi $t1, $t1, 7
 subi $t1, $t1, 3

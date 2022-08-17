@@ -1,2 +1,11 @@
-addi $t1, $t1, 1
-j 0
+Line 0: addi $t1, $t1, 1
+Line 1: addi $t1, $t1, 1
+Line 2: addi $t1, $t1, 1
+Line 3: addi $t1, $t1, 1
+Line 4: addi $t1, $t1, 1
+Line 5: addi $t1, $t1, 1
+Line 6: bneq $t1, $zero, 1
+Line 7: j l1
+Line 8: addi $t1, $zero, 0
+Line 9: addi $t1, $t1, 7
+Line 10: subi $t1, $t1, 3
