@@ -11,7 +11,7 @@ public class Main{
 
     public static void main(String[] args) throws IOException {
         BufferedReader br = new BufferedReader(new FileReader("mips.csv"));
-        BufferedWriter bw = new BufferedWriter(new FileWriter("outHex.txt"));
+        BufferedWriter bw = new BufferedWriter(new FileWriter("outHex2.txt"));
         ArrayList<String> lines = new ArrayList<>();
         System.out.println(br.readLine());
         while(true){
