@@ -33,28 +33,6 @@ public class PassOne {
             if(line == null) break;
             line = line.trim();
             if(line.equals(""))continue;
-            if(line.toLowerCase().contains("push")){
-//                System.out.println(line);
-                line = line.replace("push", "sw");
-                line += ", 0($sp)";
-                lines.add(line);
-                lines.add("addi $sp, $sp, 1");
-                lineNo += 2;
-//                System.out.println(line);
-//                lines.add(line);
-                continue;
-            }
-            else if(line.toLowerCase().contains("pop")){
-                //                System.out.println(line);
-                lines.add("subi $sp, $sp, 1");
-                line = line.replace("pop", "lw");
-                line += ", 0($sp)";
-                lines.add(line);
-                lineNo += 2;
-//                System.out.println(line);
-//                lines.add(line);
-                continue;
-            }
             if(line.contains(":")){
                 map.put(line.replace(":", ""), lineNo);
             }

@@ -70,7 +70,7 @@ public class Main {
             }
             else{
                 binIns.append((Integer.toHexString(opcode)));
-                String addr = getBit(Integer.toHexString(Integer.parseInt(instruction)));
+                String addr = Integer.toHexString(Integer.parseInt(instruction));
                 if(addr.length() == 1){
                     addr = "0" + addr;
                 }

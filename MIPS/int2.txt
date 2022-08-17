@@ -1,11 +1,27 @@
-Line 0: addi $t1, $t1, 1
-Line 1: addi $t1, $t1, 1
-Line 2: addi $t1, $t1, 1
-Line 3: addi $t1, $t1, 1
-Line 4: addi $t1, $t1, 1
-Line 5: addi $t1, $t1, 1
-Line 6: bneq $t1, $zero, 1
-Line 7: j l1
-Line 8: addi $t1, $zero, 0
-Line 9: addi $t1, $t1, 7
-Line 10: subi $t1, $t1, 3
+Line 0: addi $t1, $zero, 3
+Line 1: subi $t2, $zero, -2
+Line 2: add $t0, $t1, $t2
+Line 3: sub $t3, $t1, $t2
+Line 4: nor $t4, $t0, $t2
+Line 5: sw $t1, 3($t2)
+Line 6: srl $t2, $t2, 1
+Line 7: beq $t2, $t3, label1
+Line 8: j end
+Line 9: sll $t3, $t3, 1
+Line 10: lw $t2, 4($t2)
+Line 11: sw $t1, 0($sp)
+Line 12: addi $sp, $sp, 1
+Line 13: sw $t2, 0($sp)
+Line 14: addi $sp, $sp, 1
+Line 15: j label2
+Line 16: or $t0, $t0, $t2
+Line 17: andi $t2, $t4, 1
+Line 18: ori $t1, $t1, 5
+Line 19: subi $sp, $sp, 1
+Line 20: lw $t2, 0($sp)
+Line 21: and $t1, $t2, $t4
+Line 22: subi $sp, $sp, 1
+Line 23: lw $t1, 0($sp)
+Line 24: j end
+Line 25: beq $t0, $t2, 1
+Line 26: j label3
