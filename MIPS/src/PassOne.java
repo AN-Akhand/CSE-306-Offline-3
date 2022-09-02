@@ -83,6 +83,6 @@ public class PassOne {
         br.close();
 
 
-        Main.assemblyToHex("int3.txt");
+        MainOrig.assemblyToHex("int3.txt");
     }
 }
